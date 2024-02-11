@@ -14,17 +14,18 @@ body {
   background-size: cover;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-
 .container {
-  width: 400px;
+  width: 25rem;
   position: relative;
-  height: 555px;
+  height: 150px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(30px);
   border: 2px solid rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 16px;
   color: #fff;
+  transition: height 0.6s ease-in-out;
+  overflow: hidden;
 }
 
 .search-box {
@@ -34,6 +35,7 @@ body {
   display: flex;
   align-items: center;
   position: relative;
+  z-index: 10;
 }
 
 .search-box input {
@@ -51,7 +53,8 @@ body {
 }
 
 .search-box input::placeholder {
-  color: #fff;
+  color: #ccc;
+  font-size: 16px;
 }
 
 .search-box .map {
@@ -72,4 +75,34 @@ body {
   padding: 0 40px 0 5px;
   color: #fff;
   cursor: pointer;
+}
+
+/* weather box */
+
+.weather-box {
+  text-align: center;
+}
+
+.weather-box img {
+  width: 60%;
+}
+
+.weather-box .temprature {
+  font-size: 64px;
+  font-weight: 700;
+  position: relative;
+  line-height: 1;
+  margin: 20px 0 6px -30px;
+}
+
+.weather-box span {
+  position: absolute;
+  margin-left: 5px;
+  font-size: 24px;
+}
+
+.weather-box .description {
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: capitalize;
 }
