@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>How's The Weather?</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="images/cloud.png" type="image/x-icon" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
@@ -28,7 +31,36 @@
           </div>
         </div>
       </div>
+
+      <div class="weather-detail">
+        <div class="humidity">
+          <i class="bx bx-water"></i>
+          <div class="text">
+            <div class="info-humidity">
+              <span>0%</span>
+            </div>
+            <p>humidity</p>
+          </div>
+        </div>
+
+        <div class="wind">
+          <i class="bx bx-wind"></i>
+          <div class="text">
+            <div class="info-wind">
+              <span>0km/h</span>
+            </div>
+            <p>Wind Speed</p>
+          </div>
+        </div>
+      </div>
+      <div class="not-found">
+        <div class="box">
+          <img src="images/404.png" alt="404" />
+          <p>!Ooops Location is not not found</p>
+        </div>
+      </div>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
