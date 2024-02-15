@@ -27,4 +27,55 @@ search.addEventListener("click", (event) => {
         return;
       }
     });
+
+    const image = document.querySelector(".weather-box img");
+      const temprature = document.querySelector(".weather-box .temprature");
+      const description = document.querySelector(".weather-box .description");
+      const humidity = document.querySelector(".weather-detail .humidity span");
+      const wind = document.querySelector(".weather-detail .wind span");
+
+      if (cityHide.textContent == city) {
+        return;
+      } else {
+        cityHide.textContent = city;
+
+        container.style.height = "555px";
+        weatherBox.classList.add("active");
+        container.classList.add("active");
+        weathreDetails.classList.add("active");
+        error404.classList.remove("active");
+
+        setTimeout(() => {
+          container.classList.remove("active");
+        }, 2500);
+
+        switch (json.weather[0].main) {
+          case "Clear":
+            image.src = "images/clear.png";
+            break;
+
+          case "Rain":
+            image.src = "images/rain.png";
+            break;
+
+          case "Snow":
+            image.src = "images/snow.png";
+            break;
+
+          case "Clouds":
+            image.src = "images/cloud.png";
+            break;
+
+          case "Mist":
+            image.src = "images/mist.png";
+            break;
+
+          case "Haze":
+            image.src = "images/mist.png";
+            break;
+
+          default:
+            image.src = "images/cloud.png";
+        }
+
 });
